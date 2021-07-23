@@ -1,0 +1,110 @@
+
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document
+\usepackage[UKenglish]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{physics}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{listings}
+\usepackage{gensymb}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage[normalem]{ulem}
+\usepackage{float}
+\usepackage{blindtext} %for enumerations
+\usepackage[]{hyperref}  %link colour
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[C]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\newcommand{\latex}{\LaTeX\xspace} % Neater LaTeX symbol
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parskip{4pt}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\Large{\textsc{Lancaster University}} \\ [20pt]
+\normalsize{\textsc{Phys379 Group Project}} \\ [15pt]
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge  Wildfire Simulation using Cellular Automata: \\ Case  Study of Marysville, Australia
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{J. Majaniemi, J. Thomas, A. Baxter and A. Berry}
+
+\date{\normalsize\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+
+{\indent{\Large Abstract} }\\
+ 
+We stage a novel cellular automata model describing wildfire dynamics under the environmental factors of wind speed and direction, surface elevation and spotting. Underlying mechanisms of wildfires are scrutinized and strong relations are constructed to describe the rate and manner in which wildfires spread across heterogeneous landscapes. Further, we perform a case study of the 2009 Black Saturday bushfires in Murrindindi, Australia, by simulating these events using our cellular automata model. Results yielded are compared to historical data from these fires, consequently demonstrating the potential applications in fire modelling and risk-management.
+
+\end{abstract}
+
+\newpage
+\tableofcontents
+
+%----------Contents--------------------------
+
+\input{1_Introduction.tex}
+
+\input{2_Background}
+
+\input{3_Methodology.tex}
+
+\input{4_Results_1.tex}
+
+\input{4_Results_2.tex}
+
+\input{5_Conclusions.tex}
+
+%---------Acknowledgements-----------------------
+
+%---------Appendix-------------------------------
+
+\input{6_Appendix.tex}
+
+%---------References-----------------------------
+\newpage
+\bibliographystyle{ieeetr}
+\bibliography{references.bib}
+
+%--------End--------------------------------------
+
+\end{document}
